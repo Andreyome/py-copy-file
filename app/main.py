@@ -9,8 +9,13 @@ def copy_file(command: str) -> None:
                         file_output.write(line)
             except FileNotFoundError:
                 print("File not found")
+
+            except PermissionError:
+                print("Permission denied")
             except IOError:
                 print("Error writing to file")
+            except Exception:
+                print("Something else went wrong")
         else:
             return
     else:
