@@ -9,3 +9,7 @@ def copy_file(command: str) -> None:
                         file_output.write(line)
             except FileNotFoundError:
                 print("File not found")
+        else:
+            return
+    else:
+        return
